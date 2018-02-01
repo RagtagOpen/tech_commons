@@ -17,8 +17,7 @@ fi
 echo "Building code archive"
 ARCHIVE_PATH=$BUILD_DIR/monitoring.zip
 rm -rf "$ARCHIVE_PATH"
-zip -jr "$ARCHIVE_PATH" "$SRC_DIR"
-
+zip -jr "$ARCHIVE_PATH" $SRC_DIR/*.py
 echo "Creating AWS resources"
 
 # Create the base lambda logging policy
