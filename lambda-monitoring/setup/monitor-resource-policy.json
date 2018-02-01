@@ -1,0 +1,28 @@
+{
+   "Version":"2012-10-17",
+   "Id":"default",
+   "Statement":
+    [
+      {
+        "Sid":"InvokePermissionsForCWL10f68a82cd908f4d5600ab811f43a511",
+        "Effect":"Allow",
+        "Principal":
+        {
+           "Service":"logs.us-east-1.amazonaws.com"
+        },
+        "Action":"lambda:InvokeFunction",
+        "Resource":"arn:aws:lambda:us-east-1:534691387561:function:monitor-marchon-events",
+        "Condition":
+        {
+           "StringEquals":
+           {
+              "AWS:SourceAccount":"534691387561"
+           },
+           "ArnLike":
+           {
+             "AWS:SourceArn": "arn:aws:logs:us-east-1:534691387561:log-group:/aws/lambda/marchon-events-geojson:*"
+           }
+        }
+     }
+   ]
+}

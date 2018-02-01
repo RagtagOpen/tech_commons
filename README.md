@@ -4,7 +4,7 @@ Home for code, content, or other resources used across Ragtag application projec
 
 ## Sub-Projects
 
-### Lambda monitoring
+### [Lambda monitoring](lambda-monitoring/README.md)
 
 AWS component and setup configuration for monitoring execution of application lambda runs and sending status reports.
 

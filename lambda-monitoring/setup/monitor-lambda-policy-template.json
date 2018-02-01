@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+          "Sid": "ReadLogs",
+          "Effect": "Allow",
+          "Action": [
+              "logs:GetLogEvents",
+              "logs:FilterLogEvents"
+          ],
+          "NotResource": "*"
+      },
+      {
+          "Sid": "PublishReports",
+          "Effect": "Allow",
+          "Action": [
+              "sns:Publish"
+          ],
+          "Resource": "$TOPIC_ARN"
+      }
+  ]
+}
